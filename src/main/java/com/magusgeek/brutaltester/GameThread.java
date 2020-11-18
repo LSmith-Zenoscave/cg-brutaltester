@@ -140,14 +140,16 @@ public class GameThread extends Thread {
 					}
 				}
 
-				if (fullOut.length()>0)
-				{
-					LOG.error("Problem with referee output in game" + game + ". Output content:" + fullOut);
-				}
+				// Disabling for the prupose of cleaning output. Needed for Java 11+
 
-				if (checkForError()) {
-					error = true;
-				}
+				// if (fullOut.length()>0)
+				// {
+				// 	LOG.error("Problem with referee output in game" + game + ". Output content:" + fullOut);
+				// }
+
+				// if (checkForError()) {
+				// 	error = true;
+				// }
 
 				if (error) {
 					logHelp();
